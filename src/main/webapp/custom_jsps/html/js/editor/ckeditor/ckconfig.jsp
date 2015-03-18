@@ -86,7 +86,7 @@ CKEDITOR.config.contentsLanguage = '<%= HtmlUtil.escapeJS(contentsLanguageId.rep
 
 CKEDITOR.config.entities = false;
 
-CKEDITOR.config.extraPlugins = 'ajaxsave,media,restore,scayt,wsc,syntaxhighlight,dialog';
+CKEDITOR.config.extraPlugins = 'ajaxsave,media,restore,scayt,wsc,lightbox';
 
 CKEDITOR.config.height = 265;
 
