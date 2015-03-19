@@ -14,12 +14,7 @@
  */
 --%>
 
-<link rel="stylesheet" href="/prettyphoto/css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="/lightbox/css/lightbox.css" type="text/css" media="screen" charset="utf-8" />
 
-<script type="text/javascript" src="/prettyphoto/js/jquery.prettyPhoto.js"></script>
-
-<script type="text/javascript" charset="utf-8">
-  $(document).ready(function(){
-    $("a[rel^='lightbox']").prettyPhoto({social_tools:false});
-  });
-</script>
+<script type="text/javascript" src="/lightbox/js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="/lightbox/js/lightbox.min.js"></script>
