@@ -168,10 +168,11 @@
       }
       
       // Position Lightbox
-      var top  = $window.scrollTop() + this.options.positionFromTop;
+      var top  = this.$outerContainer.height() / 2;
+      alert(this.$outerContainer.height());
       var left = $window.scrollLeft();
       this.$lightbox.css({
-        top: top + 'px',
+        top: 'calc(50% - ' + top + 'px)',
         left: left + 'px'
       }).fadeIn(this.options.fadeDuration);
 
@@ -228,6 +229,10 @@
           }
         }
         self.sizeContainer($image.width(), $image.height());
+        
+        this.$lightbox.css({
+          top: 'calc(50% - ' + ($image.height() / 2) + 'px)'
+        }).fadeIn(this.options.fadeDuration);
       };
 
       preloader.src          = this.album[imageNumber].link;

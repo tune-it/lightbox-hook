@@ -1,9 +1,8 @@
-﻿/**************************************
-    Webutler V2.1 - www.webutler.de
-    Copyright (c) 2008 - 2011
-    Autor: Sven Zinke
-    Free for any use
-    Lizenz: GPL
-**************************************/
-
-CKEDITOR.plugins.setLang('lightbox','en',{lightbox:{title:'Lightbox',imgzoom:'Zoom image',browse:'Browse images',boxnum:'Box number',mustint:'Field "Box number" must be integer!'}});
+﻿
+CKEDITOR.plugins.setLang( 'lightbox', 'en', {
+	label: 'Lightbox',
+	url: 'Image to display in Lightbox',
+    preview: 'Preview',
+    title: 'Image title',
+    gallery: 'Gallery name'
+} );
