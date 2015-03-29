@@ -14,15 +14,22 @@
  */
 --%>
 
-<link rel="stylesheet" href="/prettyphoto/css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
+<script src="/lightbox/js/jquery-2.1.3.min.js"></script>
+<script src="/lightbox/js/lightbox.min.js"></script>
+<link href="/lightbox/css/lightbox.css" rel="stylesheet" />
 
-<script type="text/javascript" src="/prettyphoto/js/jquery-1.6.1.min.js"></script>
 <script>
-    var jq161 = jQuery.noConflict();
-    
-    jq161.getScript("/prettyphoto/js/jquery.prettyPhoto.min.js");
-
-    jq161(document).ready(function () {
-        jq161("a[rel^='lightbox']").prettyPhoto({social_tools: false});
-    });
+$(document).ready(function(){ ckeLightbox(); });
+function ckeLightbox(){
+    var c=0;
+    $('a.ckelightbox').each(function(){
+        c++;
+        var g=$(this).attr('class').split('ckelightboxgallery')[1];
+        if(!g)g=c;
+        $(this).attr('data-lightbox',g);
+        var a=$(this).attr('alt');
+        if(!a)$(this).attr('data-title',$(this).attr('title'));
+        else $(this).attr('data-title',a);
+    }); 
+}
 </script>

@@ -86,7 +86,7 @@ CKEDITOR.config.contentsLanguage = '<%= HtmlUtil.escapeJS(contentsLanguageId.rep
 
 CKEDITOR.config.entities = false;
 
-CKEDITOR.config.extraPlugins = 'ajaxsave,media,restore,scayt,wsc,link,lightbox';
+CKEDITOR.config.extraPlugins = 'dialogui,dialog,about,a11yhelp,dialogadvtab,basicstyles,bidi,blockquote,clipboard,button,panelbutton,panel,floatpanel,colorbutton,colordialog,templates,menu,contextmenu,div,resize,toolbar,elementspath,enterkey,entities,popup,filebrowser,find,fakeobjects,flash,floatingspace,listblock,richcombo,font,forms,format,horizontalrule,htmlwriter,iframe,wysiwygarea,image,indent,indentblock,indentlist,smiley,justify,menubutton,language,link,list,liststyle,magicline,maximize,newpage,pagebreak,pastetext,pastefromword,preview,print,removeformat,save,selectall,showblocks,showborders,sourcearea,specialchar,scayt,stylescombo,tab,table,tabletools,undo,wsc,lightbox';
 
 CKEDITOR.config.height = 265;
 
@@ -99,8 +99,6 @@ CKEDITOR.config.resize_enabled = <%= resizable %>;
 </c:if>
 
 CKEDITOR.config.stylesCombo_stylesSet = 'liferayStyles';
-
-CKEDITOR.config.toolbar_Full.push(['Code']);
 
 CKEDITOR.config.toolbar_editInPlace = [
 	['Styles'],
@@ -119,7 +117,7 @@ CKEDITOR.config.toolbar_email = [
 	['Undo', 'Redo', '-', 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'SelectAll', 'RemoveFormat'],
 	['Source'],
 	['Link', 'Unlink'],
-	['Image']
+	['Image', 'lightbox']
 ];
 
 CKEDITOR.config.toolbar_liferay = [
@@ -134,7 +132,7 @@ CKEDITOR.config.toolbar_liferay = [
 	'/',
 	['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent'],
 	['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
-	['Image', 'Link', 'Unlink', 'Anchor'],
+	['Image', 'lightbox', 'Link', 'Unlink', 'Anchor'],
 	['Flash', <c:if test="<%= XugglerUtil.isEnabled() %>"> 'Audio', 'Video',</c:if> 'Table', '-', 'Smiley', 'SpecialChar', 'Code'],
 	['Find', 'Replace', 'SpellChecker', 'Scayt'],
 	['SelectAll', 'RemoveFormat'],
@@ -157,7 +155,7 @@ CKEDITOR.config.toolbar_liferayArticle = [
 	'/',
 	['Source'],
 	['Link', 'Unlink', 'Anchor'],
-	['Image', 'Flash', <c:if test="<%= XugglerUtil.isEnabled() %>">'Audio', 'Video',</c:if> 'Table', '-', 'Smiley', 'SpecialChar', 'Code', 'LiferayPageBreak']
+	['Image', 'lightbox', 'Flash', <c:if test="<%= XugglerUtil.isEnabled() %>">'Audio', 'Video',</c:if> 'Table', '-', 'Smiley', 'SpecialChar', 'Code', 'LiferayPageBreak']
 ];
 
 CKEDITOR.config.toolbar_phone = [
@@ -169,13 +167,13 @@ CKEDITOR.config.toolbar_phone = [
 CKEDITOR.config.toolbar_simple = [
 	['Bold', 'Italic', 'Underline', 'Strike'],
 	['NumberedList', 'BulletedList'],
-	['Image', 'Link', 'Unlink', 'Table']
+	['Image', 'lightbox', 'Link', 'Unlink', 'Table']
 ];
 
 CKEDITOR.config.toolbar_tablet = [
 	['Bold', 'Italic', 'Underline', 'Strike'],
 	['NumberedList', 'BulletedList'],
-	['Image', 'Link', 'Unlink'],
+	['Image', 'lightbox', 'Link', 'Unlink'],
 	['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
 	['Styles', 'FontSize']
 ];
